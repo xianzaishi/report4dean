@@ -1,0 +1,151 @@
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="repair">
+<select id="queryRepairById" parameterClass="java.lang.Integer" resultClass="com.zhl.business.model.Repair">
+	select id as id,
+		title as title,
+		content as content,
+		longitude as longitude,
+		latitude as latitude,
+		create_date as createDate,
+		creator as creator,
+		status as status,
+		community_id as communityId,
+		read_level as readLevel,
+		pic_id as picId
+	from repair
+	where id = #id:INTEGER#
+</select>
+<update id="updateRepairStatusById" parameterClass="com.zhl.business.model.Repair">
+	update repair
+	<dynamic prepend="set">
+       <isNotNull prepend="," property="status">
+            status = #status#
+        </isNotNull>
+   	</dynamic>
+  	where id=#id:INTEGER#
+</update>
+<update id="increaseReadlevel" parameterClass="java.lang.Integer">
+	update repair set read_level = read_level + 1
+	where id = #id:INTEGER#
+</update>
+<select id="queryRepairDtoById" parameterClass="java.lang.Integer" resultClass="com.zhl.business.dto.RepairDto">
+	select r.id as id,
+		r.title as title,
+		r.content as content,
+		r.longitude as longitude,
+		r.latitude as latitude,
+		c.longitude as communityLongitude,
+		c.latitude as communityLatitude,
+		r.create_date as createDate,
+		r.creator as creator,
+		r.status as status,
+		r.community_id as communityId,
+		r.read_level as readLevel,
+		c.zoom as zoom,
+		rc.path as pic
+	from repair r
+	left join community c on r.community_id = c.id
+	left join repair_pic rc on rc.id = r.pic_id
+	where r.id = #id:INTEGER#
+</select>
+<select id="queryRepairListByStatus" parameterClass="java.lang.Integer" resultClass="com.zhl.business.model.Repair">
+	select id as id,
+		title as title,
+		content as content,
+		longitude as longitude,
+		latitude as latitude,
+		create_date as createDate,
+		creator as creator,
+		status as status,
+		community_id as communityId,
+		read_level as readLevel,
+		pic_id as picId
+	from repair
+	where status = #status:INTEGER#
+	order by create_date desc
+</select>
+<select id="queryRepairCountByStatus" parameterClass="java.lang.Integer" resultClass="java.lang.Integer">
+	select count(*) from repair
+	where status = #status:INTEGER#
+</select>
+<select id="queryUnhandledByReadLevel" parameterClass="java.lang.Integer" resultClass="com.zhl.business.model.Repair">
+	select id as id,
+		title as title,
+		content as content,
+		longitude as longitude,
+		latitude as latitude,
+		create_date as createDate,
+		creator as creator,
+		status as status,
+		community_id as communityId,
+		read_level as readLevel,
+		pic_id as picId
+	from repair
+	where status = 1 and read_level in (#readLevel:INTEGER#, 0)
+	order by create_date desc
+</select>
+<select id="queryUnhandledCountByReadLevel" parameterClass="java.lang.Integer" resultClass="java.lang.Integer">
+	select count(*) from repair
+	where status = 1 and read_level in (#readLevel:INTEGER#, 0)
+</select>
+<select id="queryHandledByReadLevel" parameterClass="java.lang.Integer" resultClass="com.zhl.business.model.Repair">
+	select id as id,
+		title as title,
+		content as content,
+		longitude as longitude,
+		latitude as latitude,
+		create_date as createDate,
+		creator as creator,
+		status as status,
+		community_id as communityId,
+		read_level as readLevel,
+		pic_id as picId
+	from repair
+	where status = 10 and read_level in (#readLevel:INTEGER#, 0)
+	order by create_date desc
+</select>
+<select id="queryHandledCountByReadLevel" parameterClass="java.lang.Integer" resultClass="java.lang.Integer">
+	select count(*) from repair
+	where status = 10 and read_level in (#readLevel:INTEGER#, 0)
+</select>
+<insert id="addRepairReply" parameterClass="com.zhl.business.model.RepairReply">
+	insert into repair_reply
+	<dynamic prepend="set">  
+		<isNotNull prepend="," property="content">            
+		     content = #content#  
+		</isNotNull>  
+		<isNotNull prepend="," property="createDate">            
+		     create_date = #createDate#  
+		</isNotNull>  
+		<isNotNull prepend="," property="repairId">            
+		     repair_id = #repairId#  
+		</isNotNull>  
+		<isNotNull prepend="," property="userId">            
+		     user_id = #userId#  
+		</isNotNull>
+	</dynamic>  
+</insert>
+<select id="queryReplyByRepairId" parameterClass="java.lang.Integer" resultClass="com.zhl.business.model.RepairReply">
+	select id as id ,
+		content as content,
+		create_date as createDate,
+		repair_id as repairId,
+		user_id as userId
+	from repair_reply
+	where repair_id = #repairId#
+	order by create_date asc
+</select>
+<insert id="addRepairPic" parameterClass="com.zhl.business.model.RepairPic" >
+	insert into repair_pic (path) values (#path#)
+	<selectKey resultClass="java.lang.Integer" keyProperty="id">
+		select last_insert_id() as id from repair_pic limit 1
+	</selectKey>
+</insert>
+<insert id="addRepair" parameterClass="com.zhl.business.model.Repair">
+	insert into repair (title, content, longitude, latitude, create_date, creator, status, community_id, read_level, pic_id)
+	values (#title#, #content#, #longitude#, #latitude#, #createDate#, #creator#, #status#, #communityId#, #readLevel#, #picId#)
+</insert>
+</sqlMap>
+
+
+

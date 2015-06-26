@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<!-- 模板 -->
+    <definition name="business.base" template="/WEB-INF/pages/commons/business/layouts.jsp">
+        <put-attribute name="head" value="/WEB-INF/pages/commons/business/head.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/pages/commons/business/body.jsp"/>
+        <put-attribute name="foot" value="/WEB-INF/pages/commons/business/foot.jsp"/>
+    </definition> 
+    
+    <!-- 首页 -->
+    <definition name="indexView" template="/WEB-INF/pages/index.jsp">
+    </definition>
+    
+    <!-- 登陆后首页 -->
+    <definition name="secondView" extends="business.base">
+    	<put-attribute name="body" value="/WEB-INF/pages/second.jsp"/>
+    </definition>
+    
+    <!-- ************************************ 设备报修模块 开始 ************************************ -->
+    <!-- 报修首页 -->
+    <definition name="repairIndexView" extends="business.base">
+    	<put-attribute name="body" value="/WEB-INF/pages/repair/index.jsp"/>
+    </definition>
+    
+    <!-- 报修详细页面 -->
+    <definition name="repairDetailView" extends="business.base">
+    	<put-attribute name="body" value="/WEB-INF/pages/repair/detail.jsp"/>
+    </definition>
+    
+    <!-- 新增位置页面 -->
+    <definition name="addLocationView" template="/WEB-INF/pages/repair/addLocation.jsp">
+    </definition>
+    
+    <!-- 新增报修页面 -->
+    <definition name="addRepairView" template="/WEB-INF/pages/repair/add.jsp">
+    </definition>
+    <!-- ************************************ 设备报修模块 结束 ************************************ -->
+    
+    <!-- ************************************** 商城模块 开始 ************************************** -->
+    <!-- 商城首页 -->
+    <definition name="shopIndexView" extends="business.base">
+    	<put-attribute name="body" value="/WEB-INF/pages/shop/index.jsp"/>
+    </definition>
+    
+    <!-- 商城详细页面 -->
+    <definition name="shopDetailView" extends="business.base">
+    	<put-attribute name="body" value="/WEB-INF/pages/shop/detail.jsp"/>
+    </definition>
+    
+    <!-- 添加商铺页面 -->
+    <definition name="addShopView" extends="business.base">
+    	<put-attribute name="body" value="/WEB-INF/pages/shop/addShop.jsp"/>
+    </definition>
+    <!-- ************************************** 商城模块 结束 ************************************** -->
+    
+    <!-- ************************************** 报表模块 开始 ************************************** -->
+    <!-- 左页面 -->
+    <definition name="reportLeftView" template="/WEB-INF/pages/report/frameLeft.jsp">
+    </definition>
+    
+    <!-- 右页面 -->
+    <definition name="reportRightView" template="/WEB-INF/pages/report/frameRight.jsp">
+    </definition>
+    
+    <!-- 显示查询中页面 -->
+    <definition name="reportSearchingView" template="/WEB-INF/pages/report/searching.jsp">
+    </definition>
+    <!-- ************************************** 报表模块 结束 ************************************** -->
+</tiles-definitions>

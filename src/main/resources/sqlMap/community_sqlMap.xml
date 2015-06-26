@@ -1,0 +1,15 @@
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="community">
+<select id="queryCommunity" resultClass="com.zhl.business.model.Community">
+	select id, name, zoom, longitude, latitude 
+	from community
+</select>
+<select id="queryCommunityById" parameterClass="java.lang.Integer" resultClass="com.zhl.business.model.Community">
+	select id, name, zoom, longitude, latitude 
+	from community
+	where id=#id:INTEGER#
+</select>
+</sqlMap>
+
+
+

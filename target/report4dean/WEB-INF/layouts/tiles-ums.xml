@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<!-- 后台模板 -->
+    <definition name="ums.base" template="/WEB-INF/pages/commons/ums/layouts.jsp">
+        <put-attribute name="head" value="/WEB-INF/pages/commons/ums/head.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/pages/commons/ums/body.jsp"/>
+        <put-attribute name="foot" value="/WEB-INF/pages/commons/business/foot.jsp"/>
+    </definition> 
+    
+    <!-- 用户管理首页 -->
+    <definition name="userIndexView" extends="ums.base">
+    	<put-attribute name="body" value="/WEB-INF/pages/ums/user/index.jsp"/>
+    </definition>
+    
+    <!-- 新增用户 -->
+    <definition name="addUserView" template="/WEB-INF/pages/ums/user/add.jsp">
+    </definition>
+    
+    <!-- 编辑用户 -->
+    <definition name="editUserView" extends="ums.base">
+    	<put-attribute name="body" value="/WEB-INF/pages/ums/user/edit.jsp"/>
+    </definition>
+    
+    <!-- 上传头像 -->
+    <definition name="uploadUserHeadPicView" template="/WEB-INF/pages/ums/user/upload.jsp">
+    </definition>
+    
+    <!-- 登陆 -->
+    <definition name="lognView" template="/WEB-INF/pages/login.jsp">
+    </definition>
+    
+    <!-- 授权 -->
+    <definition name="authorizeView" template="/WEB-INF/pages/ums/user/authorize.jsp">
+    </definition>
+</tiles-definitions>
