@@ -23,6 +23,7 @@
     	tree.add(1, 0, "院长日报", "${contextPath}/report/search/parm/1", "", "right");
     	tree.add(2, 0, "资源配置", "${contextPath}/report/search/parm/2", "", "right");
     	tree.add(3, 0, "工作负荷", "${contextPath}/report/search/parm/3", "", "right");
+    	tree.add(4, 0, "治疗质量", "${contextPath}/report/search/parm/4", "", "right");
 		document.write(tree);
 	 </script>
 	</div>

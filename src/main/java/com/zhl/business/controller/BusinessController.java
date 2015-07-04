@@ -71,6 +71,10 @@ public class BusinessController {
 			url = BASE_PATH + "/report/workload/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
+		case 4: // 治疗质量
+			url = BASE_PATH + "/report/workQuality/dateStart/" + date + "/dateEnd/" + date;
+			model.addAttribute("url", url);
+			break;
 		}
 		return View.ReportSearchingView;
 	}
