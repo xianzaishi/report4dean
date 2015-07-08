@@ -83,6 +83,10 @@ public class BusinessController {
 			url = BASE_PATH + "/report/patientCost/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
+		case 7: // 资产运营
+			url = BASE_PATH + "/report/assetsOperation/dateStart/" + date + "/dateEnd/" + date;
+			model.addAttribute("url", url);
+			break;
 		}
 		return View.ReportSearchingView;
 	}

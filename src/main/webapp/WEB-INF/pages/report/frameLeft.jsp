@@ -26,6 +26,7 @@
     	tree.add(4, 0, "治疗质量", "${contextPath}/report/search/parm/4", "", "right");
     	tree.add(5, 0, "工作效率", "${contextPath}/report/search/parm/5", "", "right");
     	tree.add(6, 0, "患者负担", "${contextPath}/report/search/parm/6", "", "right");
+    	tree.add(7, 0, "资产运营", "${contextPath}/report/search/parm/7", "", "right");
 		document.write(tree);
 	 </script>
 	</div>
