@@ -87,6 +87,10 @@ public class BusinessController {
 			url = BASE_PATH + "/report/assetsOperation/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
+		case 9: // 按抢救成功率分析
+			url = BASE_PATH + "/report/rescueSuccessRate/dateStart/" + date + "/dateEnd/" + date;
+			model.addAttribute("url", url);
+			break;
 		}
 		return View.ReportSearchingView;
 	}
