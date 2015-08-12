@@ -29,7 +29,7 @@
     	tree.add(7, 0, "资产运营", "${contextPath}/report/search/parm/7", "", "right");
     	tree.add(8, 0, "决策分析平台", "", "", "right");
     	tree.add(9, 8, "按抢救成功率分析", "${contextPath}/report/search/parm/9", "", "right");
-    	tree.add(10, 8, "患者平均住院数分析", "", "", "right");
+    	tree.add(10, 8, "患者平均住院天数分析", "${contextPath}/report/search/parm/10", "", "right");
     	tree.add(11, 8, "平均病床工作日", "", "", "right");
     	tree.add(12, 8, "病床周转次数分析", "", "", "right");
     	tree.add(13, 8, "门诊诊断符合率分析", "", "", "right");

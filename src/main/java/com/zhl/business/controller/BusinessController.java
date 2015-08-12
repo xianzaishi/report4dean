@@ -91,6 +91,10 @@ public class BusinessController {
 			url = BASE_PATH + "/report/rescueSuccessRate/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
+		case 10: // 患者平均住院天数分析
+			url = BASE_PATH + "/report/dayOfPatientCost/dateStart/" + date + "/dateEnd/" + date;
+			model.addAttribute("url", url);
+			break;
 		}
 		return View.ReportSearchingView;
 	}
