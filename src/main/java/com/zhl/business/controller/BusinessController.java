@@ -95,6 +95,18 @@ public class BusinessController {
 			url = BASE_PATH + "/report/dayOfPatientCost/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
+		case 11: // 平均病床工作日
+			url = BASE_PATH + "/report/avgWorkingBeds/dateStart/" + date + "/dateEnd/" + date;
+			model.addAttribute("url", url);
+			break;
+		case 12: // 病床周转次数分析
+			url = BASE_PATH + "/report/bedTurnoverTimes/dateStart/" + date + "/dateEnd/" + date;
+			model.addAttribute("url", url);
+			break;
+		case 19: // 在院病人分布
+			url = BASE_PATH + "/report/ipSpread/dateStart/" + date + "/dateEnd/" + date;
+			model.addAttribute("url", url);
+			break;
 		}
 		return View.ReportSearchingView;
 	}

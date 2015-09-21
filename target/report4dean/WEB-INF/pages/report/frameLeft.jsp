@@ -27,6 +27,18 @@
     	tree.add(5, 0, "工作效率", "${contextPath}/report/search/parm/5", "", "right");
     	tree.add(6, 0, "患者负担", "${contextPath}/report/search/parm/6", "", "right");
     	tree.add(7, 0, "资产运营", "${contextPath}/report/search/parm/7", "", "right");
+    	tree.add(8, 0, "决策分析平台", "", "", "right");
+    	tree.add(9, 8, "按抢救成功率分析", "${contextPath}/report/search/parm/9", "", "right");
+    	tree.add(10, 8, "出院患者平均住院天数分析", "${contextPath}/report/search/parm/10", "", "right");
+    	tree.add(11, 8, "平均病床工作日", "${contextPath}/report/search/parm/11", "", "right");
+    	tree.add(12, 8, "病床周转次数分析", "", "", "right");
+    	tree.add(13, 8, "门诊诊断符合率分析", "", "", "right");
+    	tree.add(14, 8, "全员临床病符合率分析", "", "", "right");
+    	tree.add(15, 8, "大型设备阳性率", "", "", "right");
+    	tree.add(16, 8, "好转率", "", "", "right");
+    	tree.add(17, 8, "治愈率", "", "", "right");
+    	tree.add(18, 8, "死亡率", "", "", "right");
+    	tree.add(19, 0, "在院病人分布", "${contextPath}/report/search/parm/19", "", "right");
 		document.write(tree);
 	 </script>
 	</div>

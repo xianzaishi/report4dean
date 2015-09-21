@@ -62,7 +62,7 @@
     </div>
     <div id="wrapperbottom_branding">
 	    <div id="wrapperbottom_branding_text">
-		    版权所有:<a href="javascript:void(0)" style='text-decoration: none'>张宏亮 </a>| 
+		    版权所有:<a href="javascript:void(0)" style='text-decoration: none'>设计:孔令涛 编程:张宏亮 校对:张朝辉 </a>| 
 		    <a href="javascript:void(0)" style='text-decoration: none'>赤峰市第二医院信息科</a>
 		</div>
     </div>
