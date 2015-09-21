@@ -31,9 +31,9 @@
     	tree.add(9, 8, "按抢救成功率分析", "${contextPath}/report/search/parm/9", "", "right");
     	tree.add(10, 8, "出院患者平均住院天数分析", "${contextPath}/report/search/parm/10", "", "right");
     	tree.add(11, 8, "平均病床工作日", "${contextPath}/report/search/parm/11", "", "right");
-    	tree.add(12, 8, "病床周转次数分析", "${contextPath}/report/search/parm/12", "", "right");
-    	tree.add(13, 8, "门诊诊断符合率分析", "", "", "right");
-    	tree.add(14, 8, "全员临床病符合率分析", "", "", "right");
+    	tree.add(12, 8, "病床周转次数", "${contextPath}/report/search/parm/12", "", "right");
+    	tree.add(13, 8, "门诊诊断符合率", "${contextPath}/report/search/parm/13", "", "right");
+    	tree.add(14, 8, "全员临床病符合率", "", "", "right");
     	tree.add(15, 8, "大型设备阳性率", "", "", "right");
     	tree.add(16, 8, "好转率", "", "", "right");
     	tree.add(17, 8, "治愈率", "", "", "right");
