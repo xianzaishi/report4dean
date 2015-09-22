@@ -107,6 +107,10 @@ public class BusinessController {
 			url = BASE_PATH + "/report/opDiagnosticRate/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
+		case 14: // 全院临床病理符合率
+			url = BASE_PATH + "/report/pathologicalRate/dateStart/" + date + "/dateEnd/" + date;
+			model.addAttribute("url", url);
+			break;
 		case 19: // 在院病人分布
 			url = BASE_PATH + "/report/ipSpread/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
