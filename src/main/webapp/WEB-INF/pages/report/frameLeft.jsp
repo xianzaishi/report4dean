@@ -35,7 +35,7 @@
     	tree.add(13, 8, "门诊诊断符合率", "${contextPath}/report/search/parm/13", "", "right");
     	tree.add(14, 8, "全院临床病理符合率", "${contextPath}/report/search/parm/14", "", "right");
     	tree.add(15, 8, "大型设备阳性率", "${contextPath}/report/search/parm/15", "", "right");
-    	tree.add(16, 8, "好转率", "", "", "right");
+    	tree.add(16, 8, "好转率", "${contextPath}/report/search/parm/16", "", "right");
     	tree.add(17, 8, "治愈率", "", "", "right");
     	tree.add(18, 8, "死亡率", "", "", "right");
     	tree.add(19, 0, "在院病人分布", "${contextPath}/report/search/parm/19", "", "right");
