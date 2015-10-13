@@ -1,6 +1,7 @@
 package com.zhl.business.controller;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.springframework.stereotype.Controller;
@@ -56,7 +57,17 @@ public class BusinessController {
 		String url = "";
 		Date dt = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		// 当天时间
 		String date = sdf.format(dt);
+
+		// 上个月时间段
+		Calendar cal = Calendar.getInstance();
+		int year = cal.get(Calendar.YEAR);
+		int month = cal.get(Calendar.MONTH) + 1;
+		month = month - 1;
+		int day = getDayOfMonth(month);
+		String filterDateOfMonthStart = year + "-" + month + "-01";
+		String filterDateOfMonthEnd = year + "-" + month + "-" + day;
 
 		switch(parm){
 		case 1: // 院长日报
@@ -72,7 +83,7 @@ public class BusinessController {
 			model.addAttribute("url", url);
 			break;
 		case 4: // 治疗质量
-			url = BASE_PATH + "/report/workQuality/dateStart/" + date + "/dateEnd/" + date;
+			url = BASE_PATH + "/report/workQuality/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
 			model.addAttribute("url", url);
 			break;
 		case 5: // 工作效率
@@ -88,7 +99,7 @@ public class BusinessController {
 			model.addAttribute("url", url);
 			break;
 		case 9: // 按抢救成功率分析
-			url = BASE_PATH + "/report/rescueSuccessRate/dateStart/" + date + "/dateEnd/" + date;
+			url = BASE_PATH + "/report/rescueSuccessRate/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
 			model.addAttribute("url", url);
 			break;
 		case 10: // 患者平均住院天数分析
@@ -115,24 +126,50 @@ public class BusinessController {
 			url = BASE_PATH + "/report/equipmentPositiveRate/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
-		case 16: // 好转率
-			url = BASE_PATH + "/report/improvementRate/dateStart/" + date + "/dateEnd/" + date;
+		case 16: // 好转率 按月
+			url = BASE_PATH + "/report/improvementRateByMonth/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
-		case 17: // 治愈率
-			url = BASE_PATH + "/report/cureRate/dateStart/" + date + "/dateEnd/" + date;
+		case 17: // 治愈率 按月
+			url = BASE_PATH + "/report/cureRateByMonth/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
-		case 18: // 死亡率
-			url = BASE_PATH + "/report/deathRate/dateStart/" + date + "/dateEnd/" + date;
+		case 18: // 死亡率 按月
+			url = BASE_PATH + "/report/deathRateByMonth/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
 		case 19: // 在院病人分布
 			url = BASE_PATH + "/report/ipSpread/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
+		case 23: // 好转率 按科室
+			url = BASE_PATH + "/report/improvementRateByDept/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 24: // 治愈率 按科室
+			url = BASE_PATH + "/report/cureRateByDept/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 25: // 死亡率 按科室
+			url = BASE_PATH + "/report/deathRateByDept/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
 		}
 		return View.ReportSearchingView;
+	}
+
+	/**
+	 * 获得一个月的天数
+	 * 
+	 * @param month
+	 * @return
+	 */
+	private static int getDayOfMonth(int month) {
+		Calendar cal = Calendar.getInstance();
+		// 下面可以设置月份，注：月份设置要减1，所以设置1月就是1-1，设置2月就是2-1，如此类推
+		cal.set(Calendar.MONTH, month - 1);
+		int MaxDay = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+		return MaxDay;
 	}
 }
 

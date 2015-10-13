@@ -20,25 +20,31 @@
 		var tree = new dTree(treeName,'${contextPath}');
 	    tree.add(0,-1,'报表');
 		//add(id, pid, name, url, title, target, icon, iconOpen, open) 
-    	tree.add(1, 0, "院长日报", "${contextPath}/report/search/parm/1", "", "right");
-    	tree.add(2, 0, "资源配置", "${contextPath}/report/search/parm/2", "", "right");
-    	tree.add(3, 0, "工作负荷", "${contextPath}/report/search/parm/3", "", "right");
-    	tree.add(4, 0, "治疗质量", "${contextPath}/report/search/parm/4", "", "right");
-    	tree.add(5, 0, "工作效率", "${contextPath}/report/search/parm/5", "", "right");
-    	tree.add(6, 0, "患者负担", "${contextPath}/report/search/parm/6", "", "right");
-    	tree.add(7, 0, "资产运营", "${contextPath}/report/search/parm/7", "", "right");
+    	tree.add(1, 0, "院长日报", "${contextPath}/report/search/parm/1", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(2, 0, "资源配置", "${contextPath}/report/search/parm/2", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(3, 0, "工作负荷", "${contextPath}/report/search/parm/3", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(4, 0, "治疗质量", "${contextPath}/report/search/parm/4", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(5, 0, "工作效率", "${contextPath}/report/search/parm/5", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(6, 0, "患者负担", "${contextPath}/report/search/parm/6", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(7, 0, "资产运营", "${contextPath}/report/search/parm/7", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(8, 0, "决策分析平台", "", "", "right");
-    	tree.add(9, 8, "按抢救成功率分析", "${contextPath}/report/search/parm/9", "", "right");
-    	tree.add(10, 8, "出院患者平均住院天数分析", "${contextPath}/report/search/parm/10", "", "right");
-    	tree.add(11, 8, "平均病床工作日", "${contextPath}/report/search/parm/11", "", "right");
-    	tree.add(12, 8, "病床周转次数分析", "", "", "right");
-    	tree.add(13, 8, "门诊诊断符合率分析", "", "", "right");
-    	tree.add(14, 8, "全员临床病符合率分析", "", "", "right");
-    	tree.add(15, 8, "大型设备阳性率", "", "", "right");
-    	tree.add(16, 8, "好转率", "", "", "right");
-    	tree.add(17, 8, "治愈率", "", "", "right");
-    	tree.add(18, 8, "死亡率", "", "", "right");
-    	tree.add(19, 0, "在院病人分布", "${contextPath}/report/search/parm/19", "", "right");
+    	tree.add(9, 8, "按抢救成功率分析", "${contextPath}/report/search/parm/9", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(10, 8, "出院患者平均住院天数分析", "${contextPath}/report/search/parm/10", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(11, 8, "平均病床工作日", "${contextPath}/report/search/parm/11", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(12, 8, "病床周转次数", "${contextPath}/report/search/parm/12", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(13, 8, "门诊诊断符合率", "${contextPath}/report/search/parm/13", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(14, 8, "全院临床病理符合率", "${contextPath}/report/search/parm/14", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(15, 8, "大型设备阳性率", "${contextPath}/report/search/parm/15", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(20, 8, "好转率", "", "", "right");
+    	tree.add(16, 20, "好转率(按月)", "${contextPath}/report/search/parm/16", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(23, 20, "好转率(按科室)", "${contextPath}/report/search/parm/23", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(21, 8, "治愈率", "", "", "right");
+    	tree.add(17, 21, "治愈率(按月)", "${contextPath}/report/search/parm/17", "", "right", "${contextPath}/images/unit-completed.ico");
+    	/* tree.add(24, 21, "治愈率(按科室)", "${contextPath}/report/search/parm/24", "", "right", "${contextPath}/images/unit-completed.ico"); */
+    	tree.add(22, 8, "死亡率", "", "", "right");
+    	tree.add(18, 22, "死亡率(按月)", "${contextPath}/report/search/parm/18", "", "right", "${contextPath}/images/unit-completed.ico");
+    	/* tree.add(25, 22, "死亡率(按科室)", "${contextPath}/report/search/parm/25", "", "right", "${contextPath}/images/unit-completed.ico"); */
+    	tree.add(19, 0, "在院病人分布", "${contextPath}/report/search/parm/19", "", "right", "${contextPath}/images/unit-completed.ico");
 		document.write(tree);
 	 </script>
 	</div>
