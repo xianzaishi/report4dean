@@ -40,10 +40,10 @@
     	tree.add(23, 20, "好转率(按科室)", "${contextPath}/report/search/parm/23", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(21, 8, "治愈率", "", "", "right");
     	tree.add(17, 21, "治愈率(按月)", "${contextPath}/report/search/parm/17", "", "right", "${contextPath}/images/unit-completed.ico");
-    	/* tree.add(24, 21, "治愈率(按科室)", "${contextPath}/report/search/parm/24", "", "right", "${contextPath}/images/unit-completed.ico"); */
+    	tree.add(24, 21, "治愈率(按科室)", "${contextPath}/report/search/parm/24", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(22, 8, "死亡率", "", "", "right");
     	tree.add(18, 22, "死亡率(按月)", "${contextPath}/report/search/parm/18", "", "right", "${contextPath}/images/unit-completed.ico");
-    	/* tree.add(25, 22, "死亡率(按科室)", "${contextPath}/report/search/parm/25", "", "right", "${contextPath}/images/unit-completed.ico"); */
+    	tree.add(25, 22, "死亡率(按科室)", "${contextPath}/report/search/parm/25", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(19, 0, "在院病人分布", "${contextPath}/report/search/parm/19", "", "right", "${contextPath}/images/unit-completed.ico");
 		document.write(tree);
 	 </script>

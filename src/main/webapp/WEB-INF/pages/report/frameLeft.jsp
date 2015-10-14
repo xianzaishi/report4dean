@@ -27,13 +27,19 @@
     	tree.add(5, 0, "工作效率", "${contextPath}/report/search/parm/5", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(6, 0, "患者负担", "${contextPath}/report/search/parm/6", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(7, 0, "资产运营", "${contextPath}/report/search/parm/7", "", "right", "${contextPath}/images/unit-completed.ico");
-    	tree.add(8, 0, "决策分析平台", "", "", "right");
+    	tree.add(8, 0, "医疗质量分析", "", "", "right");
     	tree.add(9, 8, "按抢救成功率分析", "${contextPath}/report/search/parm/9", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(10, 8, "出院患者平均住院天数分析", "${contextPath}/report/search/parm/10", "", "right", "${contextPath}/images/unit-completed.ico");
-    	tree.add(11, 8, "平均病床工作日", "${contextPath}/report/search/parm/11", "", "right", "${contextPath}/images/unit-completed.ico");
-    	tree.add(12, 8, "病床周转次数", "${contextPath}/report/search/parm/12", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(32, 8, "平均病床工作日", "", "", "right");
+    	tree.add(11, 32, "平均病床工作日 按月", "${contextPath}/report/search/parm/11", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(33, 32, "平均病床工作日 按科室", "${contextPath}/report/search/parm/33", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(26, 8, "病床周转次数", "", "", "right");
+    	tree.add(12, 26, "病床周转次数 按月", "${contextPath}/report/search/parm/12", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(27, 26, "病床周转次数 按科室", "", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(13, 8, "门诊诊断符合率", "${contextPath}/report/search/parm/13", "", "right", "${contextPath}/images/unit-completed.ico");
-    	tree.add(14, 8, "全院临床病理符合率", "${contextPath}/report/search/parm/14", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(34, 8, "全院临床病理符合率", "", "", "right");
+    	tree.add(14, 34, "全院临床病理符合率 按月", "${contextPath}/report/search/parm/14", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(28, 34, "全院临床病理符合率 按科室", "", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(15, 8, "大型设备阳性率", "${contextPath}/report/search/parm/15", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(20, 8, "好转率", "", "", "right");
     	tree.add(16, 20, "好转率(按月)", "${contextPath}/report/search/parm/16", "", "right", "${contextPath}/images/unit-completed.ico");
@@ -45,7 +51,10 @@
     	tree.add(18, 22, "死亡率(按月)", "${contextPath}/report/search/parm/18", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(25, 22, "死亡率(按科室)", "${contextPath}/report/search/parm/25", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(19, 0, "在院病人分布", "${contextPath}/report/search/parm/19", "", "right", "${contextPath}/images/unit-completed.ico");
-		document.write(tree);
+    	tree.add(29, 8, "病床使用率分析", "", "", "right");
+    	tree.add(30, 29, "病床使用率分析 按月", "", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(31, 29, "病床使用率分析 按科室", "", "", "right", "${contextPath}/images/unit-completed.ico");
+		document.write(tree);//max 34
 	 </script>
 	</div>
 </div>
