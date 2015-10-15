@@ -35,7 +35,7 @@
     	tree.add(33, 32, "平均病床工作日 按科室", "${contextPath}/report/search/parm/33", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(26, 8, "病床周转次数", "", "", "right");
     	tree.add(12, 26, "病床周转次数 按月", "${contextPath}/report/search/parm/12", "", "right", "${contextPath}/images/unit-completed.ico");
-    	tree.add(27, 26, "病床周转次数 按科室", "", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(27, 26, "病床周转次数 按科室", "${contextPath}/report/search/parm/27", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(13, 8, "门诊诊断符合率", "${contextPath}/report/search/parm/13", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(34, 8, "全院临床病理符合率", "", "", "right");
     	tree.add(14, 34, "全院临床病理符合率 按月", "${contextPath}/report/search/parm/14", "", "right", "${contextPath}/images/unit-completed.ico");

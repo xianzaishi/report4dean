@@ -154,6 +154,10 @@ public class BusinessController {
 			url = BASE_PATH + "/report/deathRateByDept/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
 			model.addAttribute("url", url);
 			break;
+		case 27: // 病床周转次数 按科室
+			url = BASE_PATH + "/report/bedTurnoverTimesByDept/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
 		case 33: // 平均病床工作日 按科室
 			url = BASE_PATH + "/report/avgWorkingBedsByDept/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
 			model.addAttribute("url", url);
