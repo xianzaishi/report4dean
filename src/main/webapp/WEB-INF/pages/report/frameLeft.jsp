@@ -39,7 +39,7 @@
     	tree.add(13, 8, "门诊诊断符合率", "${contextPath}/report/search/parm/13", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(34, 8, "全院临床病理符合率", "", "", "right");
     	tree.add(14, 34, "全院临床病理符合率 按月", "${contextPath}/report/search/parm/14", "", "right", "${contextPath}/images/unit-completed.ico");
-    	tree.add(28, 34, "全院临床病理符合率 按科室", "", "", "right", "${contextPath}/images/unit-completed.ico");
+    	tree.add(28, 34, "全院临床病理符合率 按科室", "${contextPath}/report/search/parm/28", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(15, 8, "大型设备阳性率", "${contextPath}/report/search/parm/15", "", "right", "${contextPath}/images/unit-completed.ico");
     	tree.add(20, 8, "好转率", "", "", "right");
     	tree.add(16, 20, "好转率(按月)", "${contextPath}/report/search/parm/16", "", "right", "${contextPath}/images/unit-completed.ico");

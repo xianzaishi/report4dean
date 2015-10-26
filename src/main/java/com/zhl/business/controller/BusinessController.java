@@ -118,7 +118,7 @@ public class BusinessController {
 			url = BASE_PATH + "/report/opDiagnosticRate/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
-		case 14: // 全院临床病理符合率
+		case 14: // 全院临床病理符合率 按月
 			url = BASE_PATH + "/report/pathologicalRate/dateStart/" + date + "/dateEnd/" + date;
 			model.addAttribute("url", url);
 			break;
@@ -156,6 +156,10 @@ public class BusinessController {
 			break;
 		case 27: // 病床周转次数 按科室
 			url = BASE_PATH + "/report/bedTurnoverTimesByDept/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 28: // 全院临床病理符合率 按科室
+			url = BASE_PATH + "/report/pathologicalRateByDept/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
 			model.addAttribute("url", url);
 			break;
 		case 33: // 平均病床工作日 按科室
