@@ -166,6 +166,46 @@ public class BusinessController {
 			url = BASE_PATH + "/report/avgWorkingBedsByDept/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
 			model.addAttribute("url", url);
 			break;
+		case 36: // 手术明细表 愈合 甲
+			url = BASE_PATH + "/report/operationDetailFirst/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 37: // 手术明细表 愈合 乙
+			url = BASE_PATH + "/report/operationDetailSecond/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 38: // 手术明细表 愈合 丙
+			url = BASE_PATH + "/report/operationDetailThird/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 39: // 手术明细表 愈合 丁
+			url = BASE_PATH + "/report/operationDetailForth/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 41: // 分科病人手术操作质量
+			url = BASE_PATH + "/report/operationQualityByDept/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 42: // 分科病人手术操作质量 外科系统
+			url = BASE_PATH + "/report/operationQualityByDeptWaiKe/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 43: // 分科病人手术操作质量 内科系统
+			url = BASE_PATH + "/report/operationQualityByDeptNeiKe/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 44: // 入出院诊断符合率
+			url = BASE_PATH + "/report/diagnosticRate/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 45: // 手术前后诊断符合率
+			url = BASE_PATH + "/report/operationDiagnosticRate/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 46: // 临床主要诊断与病理诊断符合率
+			url = BASE_PATH + "/report/bingLiZhenDuanRate/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
 		}
 		return View.ReportSearchingView;
 	}
