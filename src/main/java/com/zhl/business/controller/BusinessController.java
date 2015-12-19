@@ -206,6 +206,18 @@ public class BusinessController {
 			url = BASE_PATH + "/report/bingLiZhenDuanRate/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
 			model.addAttribute("url", url);
 			break;
+		case 47: // 重点手术疗效及费用(ICD)18以上
+			url = BASE_PATH + "/report/zhongDianShouShuLiaoXiao/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 49: // 重点疾病疗效及费用(ICD)18以上
+			url = BASE_PATH + "/report/zhongDianJiBingLiaoXiao/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
+		case 50: // 重点疾病疗效及费用(ICD)18以上 卫生部
+			url = BASE_PATH + "/report/zhongDianJiBingLiaoXiaoWeiShengBu/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
 		}
 		return View.ReportSearchingView;
 	}

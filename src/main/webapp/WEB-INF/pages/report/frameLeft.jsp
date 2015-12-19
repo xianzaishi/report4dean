@@ -66,7 +66,11 @@
     	tree.add(44, 8, "入出院诊断符合率", "${contextPath}/report/search/parm/44", "", "right", "${contextPath}/images/unit-completed.jpg");
     	tree.add(45, 8, "手术前后诊断符合率", "${contextPath}/report/search/parm/45", "", "right", "${contextPath}/images/unit-completed.jpg");
     	tree.add(46, 8, "临床主要诊断与病理诊断符合率", "${contextPath}/report/search/parm/46", "", "right", "${contextPath}/images/unit-completed.jpg");
-		document.write(tree);//max 46
+    	tree.add(47, 8, "重点手术疗效及费用(ICD)18以上", "${contextPath}/report/search/parm/47", "", "right", "${contextPath}/images/unit-completed.jpg");
+    	tree.add(48, 8, "重点疾病疗效及费用(ICD)18以上", "", "", "right", "");
+    	tree.add(49, 48, "重点疾病疗效及费用(ICD)18以上", "${contextPath}/report/search/parm/49", "", "right", "${contextPath}/images/unit-completed.jpg");
+    	tree.add(50, 48, "卫生部", "${contextPath}/report/search/parm/50", "", "right", "${contextPath}/images/unit-completed.jpg");
+		document.write(tree);//max 50
 	 </script>
 	</div>
 </div>
