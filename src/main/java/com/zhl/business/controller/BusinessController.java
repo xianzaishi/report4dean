@@ -14,7 +14,7 @@ import com.zhl.business.constant.View;
 
 @Controller
 public class BusinessController {
-	private static final String BASE_PATH = "http://localhost:8080/baobiao";
+	private static final String BASE_PATH = "http://localhost:8080/baobiao"; // 172.16.0.202
 	/**
 	 * 首页
 	 * 
