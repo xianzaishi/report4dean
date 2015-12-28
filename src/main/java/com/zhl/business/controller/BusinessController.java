@@ -218,6 +218,10 @@ public class BusinessController {
 			url = BASE_PATH + "/report/zhongDianJiBingLiaoXiaoWeiShengBu/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
 			model.addAttribute("url", url);
 			break;
+		case 52: // DR甲片率
+			url = BASE_PATH + "/report/DRJiaPianLv/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			model.addAttribute("url", url);
+			break;
 		}
 		return View.ReportSearchingView;
 	}
