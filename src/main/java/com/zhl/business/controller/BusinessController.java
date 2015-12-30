@@ -219,7 +219,11 @@ public class BusinessController {
 			model.addAttribute("url", url);
 			break;
 		case 52: // DR甲片率
-			url = BASE_PATH + "/report/DRJiaPianLv/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
+			url = BASE_PATH + "/report/DRJiaPianLv/dateStart/" + date + "/dateEnd/" + date;
+			model.addAttribute("url", url);
+			break;
+		case 53: // 单病种手术疾病疗效及费用
+			url = BASE_PATH + "/report/danBingZhongShouShuJiBingLiaoXiao/dateStart/" + filterDateOfMonthStart + "/dateEnd/" + filterDateOfMonthEnd;
 			model.addAttribute("url", url);
 			break;
 		}

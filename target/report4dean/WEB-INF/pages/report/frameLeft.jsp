@@ -40,7 +40,9 @@
     	tree.add(34, 8, "全院临床病理符合率", "", "", "right");
     	tree.add(14, 34, "全院临床病理符合率 按月", "${contextPath}/report/search/parm/14", "", "right", "${contextPath}/images/unit-completed.jpg");
     	tree.add(28, 34, "全院临床病理符合率 按科室", "${contextPath}/report/search/parm/28", "", "right", "${contextPath}/images/unit-completed.jpg");
-    	tree.add(15, 8, "大型设备阳性率", "${contextPath}/report/search/parm/15", "", "right", "${contextPath}/images/unit-completed.jpg");
+    	tree.add(51, 8, "大型设备阳性率", "", "", "right");
+    	tree.add(15, 51, "大型设备阳性率", "${contextPath}/report/search/parm/15", "", "right", "${contextPath}/images/unit-completed.jpg");
+    	//tree.add(52, 51, "DR甲片率", "${contextPath}/report/search/parm/52", "", "right", "${contextPath}/images/unit-completed.jpg");
     	tree.add(20, 8, "好转率", "", "", "right");
     	tree.add(16, 20, "好转率(按月)", "${contextPath}/report/search/parm/16", "", "right", "${contextPath}/images/unit-completed.jpg");
     	tree.add(23, 20, "好转率(按科室)", "${contextPath}/report/search/parm/23", "", "right", "${contextPath}/images/unit-completed.jpg");
@@ -70,7 +72,8 @@
     	tree.add(48, 8, "重点疾病疗效及费用(ICD)18以上", "", "", "right", "");
     	tree.add(49, 48, "重点疾病疗效及费用(ICD)18以上", "${contextPath}/report/search/parm/49", "", "right", "${contextPath}/images/unit-completed.jpg");
     	tree.add(50, 48, "卫生部", "${contextPath}/report/search/parm/50", "", "right", "${contextPath}/images/unit-completed.jpg");
-		document.write(tree);//max 50
+    	tree.add(53, 8, "单病种手术疾病疗效及费用", "${contextPath}/report/search/parm/53", "", "right", "${contextPath}/images/unit-completed.jpg");
+		document.write(tree);//max 53
 	 </script>
 	</div>
 </div>
