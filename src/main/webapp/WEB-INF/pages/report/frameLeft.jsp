@@ -42,7 +42,7 @@
     	tree.add(28, 34, "全院临床病理符合率 按科室", "${contextPath}/report/search/parm/28", "", "right", "${contextPath}/images/unit-completed.jpg");
     	tree.add(51, 8, "大型设备阳性率", "", "", "right");
     	tree.add(15, 51, "大型设备阳性率", "${contextPath}/report/search/parm/15", "", "right", "${contextPath}/images/unit-completed.jpg");
-    	//tree.add(52, 51, "DR甲片率", "${contextPath}/report/search/parm/52", "", "right", "${contextPath}/images/unit-completed.jpg");
+    	tree.add(52, 51, "DR甲片率", "${contextPath}/report/search/parm/52", "", "right", "${contextPath}/images/unit-completed.jpg");
     	tree.add(20, 8, "好转率", "", "", "right");
     	tree.add(16, 20, "好转率(按月)", "${contextPath}/report/search/parm/16", "", "right", "${contextPath}/images/unit-completed.jpg");
     	tree.add(23, 20, "好转率(按科室)", "${contextPath}/report/search/parm/23", "", "right", "${contextPath}/images/unit-completed.jpg");
@@ -77,5 +77,6 @@
 	 </script>
 	</div>
 </div>
+<div></div>
 </body>
 </html>

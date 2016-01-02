@@ -46,6 +46,37 @@ public class BusinessController {
 	}
 
 	/**
+	 * 获得一个月的天数
+	 * 
+	 * @param month
+	 * @return
+	 */
+	private static int getDayOfMonth(int year, int month) {
+		// Calendar cal = Calendar.getInstance(Locale.CHINA);
+		// //下面可以设置月份，注：月份设置要减1，所以设置1月就是1-1，设置2月就是2-1，如此类推
+		// cal.set(Calendar.MONTH, month - 1);
+		// int MaxDay = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+		//
+		int maxDay = 0;
+		int day = 1;
+		/**
+		 * 与其他语言环境敏感类一样，Calendar 提供了一个类方法 getInstance， 以获得此类型的一个通用的对象。Calendar 的
+		 * getInstance 方法返回一 个 Calendar 对象，其日历字段已由当前日期和时间初始化：
+		 */
+		Calendar calendar = Calendar.getInstance();
+		/**
+		 * 实例化日历各个字段,这里的day为实例化使用
+		 */
+		calendar.set(year, month - 1, day);
+		/**
+		 * Calendar.Date:表示一个月中的某天 calendar.getActualMaximum(int
+		 * field):返回指定日历字段可能拥有的最大值
+		 */
+		maxDay = calendar.getActualMaximum(Calendar.DATE);
+		return maxDay;
+	}
+
+	/**
 	 * 显示查询中页面
 	 * 
 	 * @param parm
@@ -64,10 +95,10 @@ public class BusinessController {
 		Calendar cal = Calendar.getInstance();
 		int year = cal.get(Calendar.YEAR);
 		int month = cal.get(Calendar.MONTH) + 1;
-		month = month - 1;
-		int day = getDayOfMonth(month);
+		int day = getDayOfMonth(year, month);
 		String filterDateOfMonthStart = year + "-" + month + "-01";
 		String filterDateOfMonthEnd = year + "-" + month + "-" + day;
+
 
 		switch(parm){
 		case 1: // 院长日报
@@ -228,20 +259,6 @@ public class BusinessController {
 			break;
 		}
 		return View.ReportSearchingView;
-	}
-
-	/**
-	 * 获得一个月的天数
-	 * 
-	 * @param month
-	 * @return
-	 */
-	private static int getDayOfMonth(int month) {
-		Calendar cal = Calendar.getInstance();
-		// 下面可以设置月份，注：月份设置要减1，所以设置1月就是1-1，设置2月就是2-1，如此类推
-		cal.set(Calendar.MONTH, month - 1);
-		int MaxDay = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
-		return MaxDay;
 	}
 }
 
